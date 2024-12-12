@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ff914d;
+}
+
+@keyframes slide{
+    from {
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.logos{
+    overflow: hidden;
+    padding: 20px 0;
+    background: #ff914d;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+.logos-slide{
+    animation: 5s slide infinite linear;
+    display: inline-block;
+}
+
+
+.logos-slide h1{
+    font-size: 1rem;
+    margin: 0 40px;
+    font-family: Inter;
+    color: whitesmoke;
+    letter-spacing: -0.1px;
+}

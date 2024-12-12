@@ -1,0 +1,191 @@
+
+
+body {
+    font-family: "Satoshi";
+    background-color: #f9f9f9;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+h1 {
+    font-family: "Satoshi";
+    text-align: center;
+    margin-top: 1%;
+}
+
+h3 {
+    font-family: "Satoshi";
+    text-align: left;
+    font-size: medium;
+}
+
+
+.fb{
+    width: 30px;
+}
+
+
+#FB {
+    line-height: 18px;
+}
+
+.cook {
+    height: 380px;
+    margin-top: 6%;
+}
+
+.top-bar {
+    background-color: #f0f0f0;
+    position: absolute;
+    z-index: 10;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+.left-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.circle1 {
+    width: 15px;
+    height: 15px;
+    background-color: #fe635b;
+    border: solid;
+    border-width: thin;
+    border-radius: 50%;
+    border-color: #f53e36;
+    cursor: pointer;
+}
+
+.circle2 {
+    width: 15px;
+    height: 15px;
+    background-color: #febd30;
+    border: solid;
+    border-width: thin;
+    border-radius: 50%;
+    border-color: #eaa81e;
+    cursor: pointer;
+}
+
+.circle3 {
+    width: 15px;
+    height: 15px;
+    background-color: #28c942;
+    border: solid;
+    border-width: thin;
+    border-radius: 50%;
+    border-color: #0eb51e;
+    cursor: pointer;
+}
+
+.circle-btn:hover {
+    background-color: #999;
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    object-fit: contain;
+}
+
+.login-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 3%;
+    background-color: white;
+    padding: 40px;
+    width: 900px;
+    height: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+    line-height: 1.8;
+    position: relative;
+}
+
+
+.formm {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.social-login {
+    width: 50%;
+    text-align: center;
+}
+
+.tabs {
+    font-family: "Satoshi";
+    letter-spacing: -0.1px;
+    padding: 1%;
+    border: solid;
+    border-color: #818380;
+    border-radius: 30px;
+    border-width: thin;
+    height: 35px;
+    width: 350px;
+}
+
+.mestabs {
+    font-family: "Satoshi";
+    letter-spacing: -0.1px;
+    padding: 1%;
+    border: solid;
+    border-color: #818380;
+    border-radius: 20px;
+    border-width: thin;
+}
+
+.sub {
+    background-color: black;
+    letter-spacing: -0.1px;
+    padding: 1%;
+    border: solid;
+    border-color: #818380;
+    border-radius: 30px;
+    border-width: thin;
+    margin-top: 5%;
+    height: 40px;
+    width: 350px;
+}
+
+.subtext {
+    font-family: "Satoshi";
+    color: #f0f0f0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+}
+

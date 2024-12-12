@@ -1,0 +1,475 @@
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+    --gradient-color: linear-gradient(90deg,
+    hsl(48, 100%, 50%) 0%,
+    hsl(28, 100%, 54%, 100%));
+--black-color: hsl(225, 15%, 6%);
+--reflection-color: hsla(48, 30%, 95%, .3);
+--body-color: hsl(48, 100%, 98%);
+
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Satoshi', sans-serif;
+    background-color: #fef8f8;
+  }
+
+/* Scrollbar */
+
+
+
+  
+  /* Container for cards */
+  .cards-container {
+    overflow-x: hidden; /* Hide overflow when not needed */
+    position: relative;
+    padding: 1rem 0;
+   
+  }
+
+  .bestsellerBox{
+     padding: 30px 0px 30px; 
+  }
+
+  .headingBox{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #e67c39;
+  }
+
+  .tophead p{
+    text-align: center;
+    padding: 5px;
+    color: white;
+  }
+
+  .tophead{
+    background-color: red;
+ 
+  }
+
+  .bestsellers{
+    margin-left: 5vw;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 0.1px;
+    display: flex;
+    
+  }
+
+  .bestsellers2 {
+    text-decoration: underline;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 0.1px;
+    margin-right: 5vw;
+    transition: opacity 0.5s ease; /* Apply transition to opacity */
+  }
+  
+  .bestsellers2:hover {
+    cursor: pointer;
+    opacity: 0.4; /* Slight fade effect */
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0.1rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .card__image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc(var(--curve) * 1px);
+    background-color: var(--surface-color);
+    transform: translateY(100%);
+    transition: 0.2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+   
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: 0.2s ease-in-out;
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+  }
+  
+  .card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .card__title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    
+    color: #6a515e;
+    
+    p{
+      font-weight: 400;
+      color: #e67c39;
+    }
+  }
+  
+  .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-size: 0.8em;
+    color: #d7bdca;
+  }
+  
+  .card__status {
+    font-size: 0.8em;
+    color: #d7bdca;
+  }
+  
+  .card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #d7bdca;
+   
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .card:active .card__overlay,
+.card.active .card__overlay {
+    transform: translateY(0);
+}
+
+.card:active .card__header,
+.card.active .card__header {
+    transform: translateY(0);
+}
+
+
+
+/* Carousel Container */
+.carousel-container {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap scrolling behavior */
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Add space around the carousel */
+    scrollbar-width: none;
+  }
+  
+  /* Carousel */
+  .carousel {
+    display: flex;
+    gap: 20px; /* Space between items */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    margin: 0.1rem 5vw;
+  }
+  
+  .carousel iframe {
+    scroll-snap-align: center; /* Snap alignment */
+    flex-shrink: 0; /* Prevent items from shrinking */
+    border: none;
+    border-radius: calc(var(--curve) * 1px);
+    max-width: 100%; /* Ensure responsiveness */
+  }
+  
+  
+
+/* video heading */
+
+
+.videoSec{
+  background-color: #ff914d;
+  background-size: cover;
+  background-position: center;
+  padding: 30px 0px 30px; 
+}
+
+.videoSec h1{
+  text-align: center;
+  font-family: Inter;
+  font-size: 3rem;
+  letter-spacing: -2px;
+  font-weight: 900;
+  color: whitesmoke;
+}
+
+.videoSec p{
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 1rem;
+
+  font-weight: 300;
+  color: whitesmoke;
+}
+
+
+  
+  /* Carousel styles for smaller screens */
+
+
+  .parent{
+    position: relative;
+  }
+
+  .circle{
+    position: absolute;
+  bottom: 5px;
+  left: 20px;
+  }
+
+
+
+  /* maps */
+
+.mapbox{
+  display: flex;
+  flex-direction: column;
+}
+
+  
+/* hero2 */
+
+.hero2 {
+  position: relative;
+  width: 100%;
+ 
+  padding: 30px 90px 30px;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3rem;
+
+ 
+}
+
+.hero-img2 img {
+  right: 0;
+  width: 80%;
+  height: auto;
+  transition: 0.4s;
+  border-radius: 50%;
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+position: relative;
+
+}
+
+.hero-img2 {
+  position: relative; /* Ensures child absolute positioning works */
+  display: flex; /* Enable flexible alignment */
+  justify-content: flex-end; /* Pushes the child (img) to the right */
+  padding: 0; /* Ensure there's no padding causing space */
+}
+
+
+
+.hero-text2{
+align-self: center;
+}
+
+
+.hero-text2 h1 {
+  font-family: Inter;
+  font-size: 3rem;
+  letter-spacing: -1.5px;
+  font-weight: 900;
+
+  width: 90%;
+  color: #e67c39;
+  line-height: 40px;
+  margin-top: 10px; /* Adjust the top margin as needed */
+  margin-bottom: 40px; /* Retain the original bottom margin */
+ 
+}
+
+.hero-text2 h5 {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.hero-text2 p {
+  color: #e67c39;
+  width: 85%;
+  max-width: 620px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 20px;
+
+  text-decoration: underline;
+}
+
+.italic{
+  font-style: italic;
+}
+
+#ownerName{
+text-decoration: none;
+font-weight: 900;
+text-transform: uppercase;
+color: #6a515e;
+letter-spacing: -0.5px;
+}
+.main-hero2 {
+  display: flex;
+  align-items: center;
+}
+
+
+  @media (max-width: 1440px) {
+    .cards-container {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        display: flex;
+        justify-content: flex-start;
+        padding: 1rem 0;
+        scroll-snap-type: x mandatory; /* Smooth snapping */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+
+    .cards {
+        display: flex;
+        gap: 1rem;
+        width: max-content; /* Prevent shrinking to container width */
+    }
+
+    .card {
+        flex: 0 0 auto; /* Prevent cards from shrinking */
+        scroll-snap-align: center; /* Align cards in center while scrolling */
+        width: 300px; /* Fixed card width */
+    }
+
+    .card__header {
+        padding: 1.5em; /* Adjust padding for smaller screens */
+    }
+
+    .card__description {
+        font-size: 0.9em; /* Adjust font size */
+    }
+}
+
+@media (max-width: 920px){
+
+
+  .hero2{
+    grid-template-columns: 1fr;
+    height: auto;
+    align-items: center;
+  }
+
+
+  .hero-img2{
+width: 500px;
+height: 500px;
+margin: 0 auto;
+  }
+
+  .hero-img2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+ }
+
+
+
+
+
+ @media (max-width: 570px) {
+  .hero2 {
+      height: auto;
+      padding: 8% 8%;
+  }
+
+  .hero-img2 {
+      height: 400px;
+      width: 400px;
+      margin: 0 auto;
+      justify-content: center;
+  }
+}
+
+:root {
+  --big-font: 4rem;
+}
+
+@media (max-width: 440px) {
+  :root {
+      --big-font: 3.4rem;
+  }
+
+  .hero-text2 h5 {
+      font-size: 15px;
+  }
+
+  .hero-img2 {
+      height: 360px;
+      width: 360px;
+      margin: 0 auto;
+  }
+}
+
